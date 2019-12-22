@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.register {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.register img {
+    margin-top: -270px;
+}
+
+.account_wrap {
+    position: absolute;
+    top: 60px;
+    left: 500px;
+    width: 350px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+.content_top {
+    text-indent: 25px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 6px 6px 0 0;
+    border-bottom: 1px solid #b9b9b9;
+}
+
+.content_top a {
+    display: block;
+    float: right;
+    margin: 10px 20px;
+    width: 26px;
+    height: 26px;
+    background-image: url(../images/login/back.png);
+}
+
+.content {
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.content input {
+    transition: 0.5s;
+    outline: none;
+    text-indent: 1em;
+    margin-bottom: 12px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background-color: #e4e4e4;
+}
+
+.content>div {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: rgb(255, 0, 0);
+    padding-left: 20px;
+    background: url(../images/login/err_ico2.png)no-repeat -20px -53px;
+}
+
+.content>a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 6px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    background-color: #ff9d00;
+    margin-bottom: 10px;
+}
+
+.content span {
+    color: #bbb;
+    float: right;
+    font-size: 12px;
+}
+
+.content span a {
+    color: #7e7e7e;
+}
+
+.content span a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.content .register_code {
+    width: 300px;
+    height: 50px;
+    padding: 0;
+}
+
+.register_code input {
+    width: 100px;
+    height: 30px;
+    float: left;
+    border-radius: 0;
+}
+
+.register_code>div {
+    float: left;
+    padding: 0 10px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #ddd5d5;
+    color: #333;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.content_bottom {
+    width: 180px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+    text-indent: 6px;
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+.content_bottom a {
+    margin-left: 2px;
+    color: #ff9d00;
+}
+
+.content_bottom a:hover {
+    color: #ffc400;
+    text-decoration: underline;
+}

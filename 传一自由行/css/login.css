@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-width: 1000px;
+    overflow: hidden;
+}
+
+.login {
+    width: 100%;
+    height: 650px;
+    background-image: url(../images/login/06.jpg);
+    overflow: hidden;
+}
+
+.account_wrap {
+    width: 350px;
+    height: 370px;
+    background-color: #fff;
+    border-radius: 6px;
+    margin: 80px auto;
+}
+
+.content_top {
+    text-indent: 25px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 6px 6px 0 0;
+    border-bottom: 1px solid #b9b9b9;
+}
+
+.content_top a {
+    display: block;
+    float: right;
+    margin: 10px 20px;
+    width: 26px;
+    height: 26px;
+    background-image: url(../images/login/back.png);
+}
+
+.content {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.content input {
+    transition: 0.5s;
+    outline: none;
+    text-indent: 1em;
+    margin-bottom: 12px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background-color: #e4e4e4;
+}
+
+.content .pass {
+    text-align: right;
+}
+
+.content .pass a {
+    color: #acacac;
+}
+
+.content .pass a:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+.content>a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 6px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    background-color: #ff9d00;
+    margin-bottom: 10px;
+}
+
+.content>div {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: rgb(255, 0, 0);
+    padding-left: 20px;
+    background: url(../images/login/err_ico2.png)no-repeat -20px -53px;
+}
+
+.content_target {
+    width: 180px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+    text-indent: 6px;
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+.content_target a {
+    margin-left: 2px;
+    color: #ff9d00;
+}
+
+.content_target a:hover {
+    color: #ffc400;
+    text-decoration: underline;
+}
+
+.content_bottom {
+    width: 300px;
+    height: 68px;
+    line-height: 40px;
+    border-radius: 4px;
+    text-indent: 6px;
+    margin: 10px auto;
+    font-size: 14px;
+}
+
+.content_bottom a {
+    margin-left: 6px;
+    color: #ff9d00;
+}
+
+.content_bottom a:hover {
+    color: #ffc400;
+    text-decoration: underline;
+}
+
+.login_weibo,
+.login_qq,
+.login_weixin {
+    display: block;
+    float: left;
+    width: 26px;
+    height: 26px;
+    background-image: url(../images/bg01.png);
+    margin-right: 30px;
+}
+
+.login_weibo {
+    background-position: 0 -50px;
+}
+
+.login_weibo:hover {
+    background-position: 0 -80px;
+}
+
+.login_qq {
+    background-position: -30px -50px;
+}
+
+.login_qq:hover {
+    background-position: -30px -80px;
+}
+
+.login_weixin {
+    background-position: 0 35px;
+}
+
+.login_weixin:hover {
+    background-position: -30px 35px;
+}

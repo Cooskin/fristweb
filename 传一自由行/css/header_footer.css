@@ -1,0 +1,385 @@
+/* reset 默认样式重置 */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    font-size: 14px;
+    min-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+em {
+    font-style: normal;
+}
+
+
+/* 三角形 */
+
+.triangle {
+    display: inline-block;
+    vertical-align: middle;
+    border: 4px solid transparent;
+    border-top-color: #3c3c3c;
+}
+
+
+/* header 头部 */
+
+header {
+    width: 100%;
+    height: 60px;
+}
+
+.header {
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    padding-top: 1px;
+}
+
+
+/* logo */
+
+.header .head_logo,
+#nav {
+    height: 60px;
+    margin-right: 20px;
+    float: left;
+}
+
+.header .head_logo a img {
+    width: 200px;
+    height: 48px;
+}
+
+.header .head_logo a {
+    margin: 5px 0;
+    display: block;
+}
+
+
+/* 导航栏 */
+
+#nav .activ {
+    background-color: #ff9d00;
+    border-bottom: 2px solid #ff9d00;
+}
+
+.activ a {
+    color: #fff;
+}
+
+#nav li {
+    height: 58px;
+    float: left;
+    text-align: center;
+    line-height: 58px;
+}
+
+#nav li:hover {
+    border-bottom: 2px solid #ff9d00;
+}
+
+#nav li:hover a {
+    color: #ff9d00;
+}
+
+#nav li:hover .triangle {
+    border-top-color: #ff9d00;
+}
+
+#nav .activ:hover a {
+    color: #fff;
+}
+
+#nav li a {
+    height: 58px;
+    /* width: ; */
+    padding: 0 15px;
+    line-height: 58px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+
+/* 搜索框 */
+
+#search {
+    display: none;
+    float: left;
+    height: 40px;
+    padding: 10px 0;
+    position: relative;
+    margin-left: 70px;
+}
+
+#search input {
+    border: none;
+    background: #e9e9e9;
+    border-radius: 4px;
+    height: 30px;
+    width: 130px;
+    margin: 5px;
+}
+
+#search a {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    background-image: url(../images/bg01.png);
+    background-position: -30px 90px;
+}
+
+
+/* 未登录 */
+
+.login_out,
+#user {
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    padding: 15px 0;
+    float: right;
+    font-size: 14px;
+}
+
+.login_out .login_weibo,
+.login_out .login_qq,
+.login_out .login_weixin {
+    display: block;
+    float: left;
+    width: 26px;
+    height: 26px;
+    background-image: url(../images/bg01.png);
+    margin-right: 10px;
+}
+
+.login_out .login_weibo {
+    background-position: 0 -50px;
+}
+
+.login_out .login_weibo:hover {
+    background-position: 0 -80px;
+}
+
+.login_out .login_qq {
+    background-position: -30px -50px;
+}
+
+.login_out .login_qq:hover {
+    background-position: -30px -80px;
+}
+
+.login_out .login_weixin {
+    background-position: 0 35px;
+}
+
+.login_out .login_weixin:hover {
+    background-position: -30px 35px;
+}
+
+.login_out span {
+    margin: 0 4px;
+    color: #ccc;
+}
+
+.login_out a {
+    color: #ff9d00;
+}
+
+.login_out a:hover {
+    text-decoration: underline;
+}
+
+
+/* 登录 */
+
+#user {
+    position: relative;
+    width: 55px;
+    margin-right: 145px;
+}
+
+#user:hover ul {
+    display: block;
+}
+
+#user:hover .head_user {
+    border: 2px solid #ff9d00;
+}
+
+#user:hover .triangle {
+    border-top-color: #ff9d00;
+}
+
+#user:hover .head_user .triangle {
+    display: block;
+}
+
+.head_user {
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 4px;
+    width: 28px;
+    height: 28px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background: url(../images/login/header-img.png)no-repeat -2px;
+}
+
+.head_user .triangle {
+    border: 6px solid transparent;
+    border-bottom-color: #ff9d00;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    display: none;
+}
+
+.head_user ul {
+    position: absolute;
+    left: -30px;
+    bottom: -60px;
+    z-index: 2;
+    background-color: #ffffff;
+    border: #ff9d00 1px solid;
+    display: none;
+}
+
+.head_user ul li {
+    background-color: #e9e9e9;
+    width: 100px;
+    height: 30px;
+    color: #3c3c3c;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.head_user ul li:hover {
+    background-color: #c3c3c3;
+}
+
+.head_user ul li div {
+    float: left;
+    margin: 2px;
+    height: 26px;
+    width: 26px;
+    background: url(../images/bg01.png)no-repeat;
+}
+
+.head_user ul li .user {
+    background-position: -85px -45px;
+}
+
+.head_user ul li .out {
+    background-position: -113px -105px;
+}
+
+
+/* 底部 */
+
+footer {
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
+    color: #c3c3c3;
+    background-color: #3c3c3c;
+}
+
+.footer {
+    width: 1160px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 2px;
+    padding: 20px;
+}
+
+.footer a {
+    color: #c3c3c3;
+}
+
+.footer a:hover {
+    color: #e9e9e9;
+}
+
+.footer dl {
+    margin: 0 30px;
+    float: left;
+}
+
+.footer dt {
+    height: 30px;
+    line-height: 30px;
+}
+
+.footer dd {
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.footer em {
+    color: #ff9d00;
+}
+
+.guide {
+    width: 200px;
+}
+
+.about {
+    width: 180px;
+}
+
+.service {
+    width: 140px;
+}
+
+.service dt {
+    text-align: center;
+}
+
+.service em {
+    margin: 0 20px;
+}
+
+.service a em {
+    margin: 0;
+}
+
+.footer div {
+    width: 150px;
+    height: 180px;
+    float: left;
+    margin-left: 140px;
+}
+
+.footer div img {
+    width: 120px;
+    float: left;
+    margin: 10px 15px;
+}
+
+.footer div strong {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    float: left;
+}

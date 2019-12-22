@@ -1,0 +1,38 @@
+/* 头部 */
+
+header {
+    background-color: transparent;
+    position: absolute;
+}
+
+.triangle {
+    border-top-color: #fff;
+}
+
+nav a {
+    color: #fff;
+}
+
+header:hover {
+    background-color: #fff;
+}
+
+header:hover nav a {
+    color: #000;
+}
+
+header:hover .triangle {
+    border-top-color: #3c3c3c;
+}
+
+header:hover nav .activ a {
+    color: #fff;
+}
+
+
+/* 图片 */
+
+.mdd_content img {
+    width: 100%;
+    margin: -250px 0 0;
+}
