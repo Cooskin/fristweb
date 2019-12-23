@@ -15,6 +15,7 @@
 
 .banner_img .dis {
     display: block;
+    transition: 1s;
 }
 
 
