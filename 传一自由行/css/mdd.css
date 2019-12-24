@@ -1,63 +1,218 @@
+/* 目的地共用的头部样式 */
+
 .mdd_content {
-    width: 1200px;
-    height: 1000px;
+    width: 100%;
+    height: 1720px;
     margin: 0 auto;
     margin-top: 10px;
 }
 
-.hot_mdd {
-    height: 400px;
-    width: 100%;
-}
-
 .recommend,
 .subject {
-    height: 300px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .content_head {
     width: 100%;
 }
 
-.content_head h3 {
+.content_head h1 {
     height: 40px;
     width: 100%;
     line-height: 40px;
     font-weight: normal;
-    font-size: 18px;
+    /* font-size: 18px; */
     text-align: center;
 }
 
-.content_head ul {
+.recommend .mdd_nav {
+    width: 962px;
     margin: 0 auto;
-    height: 42px;
 }
 
-.hot_mdd ul {
-    width: 665px;
+.subject .mdd_nav {
+    width: 320px;
+    margin: 0 auto;
 }
 
-.recommend ul {
-    width: 830px;
-}
-
-.recommend ul li {
-    margin: 0 10px;
-}
-
-.content_head li {
-    float: left;
+.mdd_nav a {
+    display: inline-block;
     padding: 10px;
+    font-size: 18px;
+    border-bottom: 2px solid transparent;
+}
+
+.mdd_nav .mdd_activ {
+    border-bottom: 2px solid #ff9d00;
+}
+
+.mdd_nav span {
+    margin: 0 10px;
+    color: #ddd;
+    font-size: 10px;
+}
+
+
+/* 热门目的地 */
+
+.hot_mdd_wraper {
+    width: 100%;
+    border-bottom: 1px solid #999;
+}
+
+.hot_mdd {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.hot_mdd .mdd_nav {
+    width: 742px;
+    margin: 0 auto;
+}
+
+.hot_mdd_content {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.hot_mdd_content::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.city_wrap,
+.city_wrap dl,
+.city_wrap dt,
+.city_wrap dd {
+    float: left;
+}
+
+.city_wrap {
+    width: 480px;
+    padding-top: 10px;
+}
+
+.city_wrap+.city_wrap {
+    margin-left: 50px;
+}
+
+.city_wrap dt a {
+    text-decoration: underline;
+}
+
+.city_wrap a:hover {
+    text-decoration: underline;
+    color: #ff9d00;
+}
+
+.city_wrap dl {
+    height: 79px;
+    width: 100%;
+    border-bottom: 1px dotted #d6d6d6;
+}
+
+.city_wrap dt {
+    padding: 10px;
+    margin-right: 20px;
     font-size: 16px;
 }
 
-.content_head li:hover {
-    border-bottom: 1px solid #ff9d00;
+.city_wrap dd {
+    padding: 10px;
 }
 
-.content_head li span {
-    margin-right: 20px;
-    color: #ddd;
-    font-size: 10px;
+
+/* 当月推荐 */
+
+.recommend_wraper {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #f5f5f5;
+}
+
+.recommend {
+    height: 570px;
+}
+
+.recommend_content {
+    width: 100%;
+    height: 580px;
+}
+
+.content_wrap {
+    width: 1020px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.content_wrap .content_main {
+    display: none;
+}
+
+.content_wrap .dis {
+    display: block;
+}
+
+.content_main {
+    width: 100%;
+    height: 100%;
+}
+
+.main1 {
+    width: 320px;
+    height: 220px;
+    position: relative;
+    float: left;
+    margin: 10px 10px;
+}
+
+.main2 {
+    width: 240px;
+    height: 220px;
+    position: relative;
+    float: left;
+    margin: 10px 3px 12px 10px;
+}
+
+.main1 a,
+.main2 a {
+    display: block;
+}
+
+.main1 img,
+.main2 img,
+.main1 a,
+.main2 a,
+.main2 .more {
+    width: 100%;
+    height: 100%;
+}
+
+.main1 div,
+.main2 div {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    text-indent: 20px;
+}
+
+.main2 .more {
+    background: rgb(0, 0, 0, 0.5);
+    line-height: 220px;
+    text-align: center;
+    text-indent: 0;
+}
+
+
+/* 主题推荐 */
+
+.subject_wraper {
+    height: 800px;
+    padding: 20px 0;
 }
