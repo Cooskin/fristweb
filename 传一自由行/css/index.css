@@ -135,8 +135,8 @@
 /* 内容 */
 
 .container {
-    width: 1200px;
-    height: 950px;
+    width: 1100px;
+    height: 1000px;
     margin: 0 auto;
 }
 
@@ -145,13 +145,21 @@
     float: left;
 }
 
+.cont_img img {
+    width: 260px;
+    height: 1000px;
+}
+
 .cont_main {
     height: 100%;
     float: left;
 }
 
+
+/* 热卖爆款 */
+
 .main_top {
-    width: 860px;
+    width: 700px;
     height: 300px;
     padding: 0 20px;
 }
@@ -160,6 +168,7 @@
     height: 45px;
     line-height: 45px;
     font-size: 18px;
+    text-indent: 16px;
     font-weight: normal;
     letter-spacing: 4px;
 }
@@ -169,20 +178,16 @@
     height: 230px;
     position: relative;
     float: left;
-    margin: 10px 10px;
+    margin: 10px 16px;
 }
 
 .hot_content ul li p {
-    width: 180px;
+    width: 178px;
     height: 38px;
     padding: 10px 10px 0;
-    color: rgb(250, 250, 250);
-    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(71, 71, 71);
+    background-color: rgba(250, 250, 250, 1);
     position: relative;
-    /* display: -webkit-box;
-    box-orient: vertical;
-    line-clamp: 2;
-    overflow: hidden; */
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
@@ -190,14 +195,179 @@
 }
 
 .hot_content ul li p:hover {
-    top: -100px;
-    height: 138px;
-    /* color: rgb(250, 250, 250);
-    background-color: rgba(0, 0, 0, 0.8); */
+    top: -60px;
+    height: 98px;
+    border: 1px solid #9e9e9e;
+    color: #272727;
 }
 
 .hot_content ul li span {
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+
+/* 游记 */
+
+.main_bottom {
+    width: 700px;
+    padding: 0 20px;
+}
+
+#travels_head {
+    width: 700px;
+    height: 60px;
+    transition: 2s;
+    border-bottom: 1px solid #9e9e9e;
+}
+
+#travels_head li {
+    float: left;
+    height: 59px;
+    line-height: 59px;
+    text-indent: 10px;
+    font-size: 18px;
+    border-bottom: 3px solid transparent;
+    padding-right: 30px;
+    margin-left: 10px;
+}
+
+#travels_head .activ {
+    border-bottom: 3px solid #ff9d00;
+}
+
+#travels_head .activ a {
+    color: #ff9d00;
+}
+
+.main_bottom #dis,
+.main_bottom #dis {
+    display: block;
+}
+
+.hot_travels,
+.new_travels {
+    width: 680px;
+    height: 580px;
+    padding: 10px;
+    display: none;
+    margin-top: 8px;
+    /* border: 1px solid black; */
+}
+
+.hot_travels li,
+.new_travels li {
+    width: 100%;
+    height: 150px;
+    padding-bottom: 4px;
+}
+
+.hot_travels li:hover,
+.new_travels li:hover {
+    background-color: #ebebeb;
+}
+
+.travels_img {
+    width: 220px;
+    height: 150px;
+    float: left;
+}
+
+.travels_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.travels_text {
+    width: 440px;
+    height: 100%;
+    padding: 0 10px;
+    float: left;
+}
+
+.travels_text h3 {
+    font-weight: normal;
+    font-family: 微软雅黑;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.travels_text p {
+    height: 70px;
+    margin-top: 10px;
+}
+
+.user_info {
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+.user_info span {
+    color: #999;
+}
+
+.user_info span a {
+    color: #999;
+}
+
+.user_info a:hover {
+    color: #ff9d00;
+    text-decoration: underline;
+}
+
+.user_name span {
+    color: #ff9d00;
+}
+
+.place::before,
+.page_view::before {
+    content: '';
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    vertical-align: middle;
+    background-image: url(../images/bg02.png);
+}
+
+.place {
+    margin-right: 6px;
+}
+
+.place::before {
+    width: 15px;
+    background-position: 0px -50px;
+}
+
+.page_view {
+    margin-left: 8px;
+}
+
+.page_view::before {
+    background-position: -30px -49px;
+}
+
+.user_name img {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.ding {
+    float: right;
+}
+
+.ding a {
+    width: 38px;
+    height: 33px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../images/bg02.png) -60px 0;
+}
+
+.ding em {
+    color: #ff9d00;
 }

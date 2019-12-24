@@ -1,38 +1,63 @@
-/* 头部 */
-
-header {
-    background-color: transparent;
-    position: absolute;
+.mdd_content {
+    width: 1200px;
+    height: 1000px;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
-.triangle {
-    border-top-color: #fff;
-}
-
-nav a {
-    color: #fff;
-}
-
-header:hover {
-    background-color: #fff;
-}
-
-header:hover nav a {
-    color: #000;
-}
-
-header:hover .triangle {
-    border-top-color: #3c3c3c;
-}
-
-header:hover nav .activ a {
-    color: #fff;
-}
-
-
-/* 图片 */
-
-.mdd_content img {
+.hot_mdd {
+    height: 400px;
     width: 100%;
-    margin: -250px 0 0;
+}
+
+.recommend,
+.subject {
+    height: 300px;
+    width: 100%;
+}
+
+.content_head {
+    width: 100%;
+}
+
+.content_head h3 {
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+}
+
+.content_head ul {
+    margin: 0 auto;
+    height: 42px;
+}
+
+.hot_mdd ul {
+    width: 665px;
+}
+
+.recommend ul {
+    width: 830px;
+}
+
+.recommend ul li {
+    margin: 0 10px;
+}
+
+.content_head li {
+    float: left;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.content_head li:hover {
+    border-bottom: 1px solid #ff9d00;
+}
+
+.content_head li span {
+    margin-right: 20px;
+    color: #ddd;
+    font-size: 10px;
 }
