@@ -36,7 +36,7 @@
                     </li>
                     <li>
                         <a href="javascript:;">旅商商城
-                            <div class="triangle"></div>
+                            <div class="triangle_down"></div>
                         </a>
                     </li>
                     <li class="activ">
@@ -44,7 +44,7 @@
                     </li>
                     <li>
                         <a href="javascript:;">社区
-                            <div class="triangle"></div>
+                            <div class="triangle_down"></div>
                         </a>
                     </li>
                     <li>
@@ -71,7 +71,7 @@
                 <!-- 已登录 -->
                 <div id="user" style="display: none;">
                     <div class="head_user">
-                        <div class="triangle"></div>
+                        <div class="triangle_down"></div>
                         <ul>
                             <li>
                                 <div class="user"></div>
@@ -83,13 +83,354 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="triangle"></div>
+                    <div class="triangle_down"></div>
                 </div>
             </div>
 
         </div>
     </header>
+    <div class="hotel_wraper">
+        <!-- 酒店搜索 -->
+        <div class="hotel_search">
+            <h2>酒店</h2>
+            <div class="search_local">
+                <input type="text" placeholder="出行目的地" />
+            </div>
+            <div class="begin_time">
+                <input type="text" placeholder="入住日期" />
+                <i></i>
+            </div>
+            <div class="over_time">
+                <input type="text" placeholder="离店日期" />
+                <i></i>
+            </div>
+            <div class="number">
+                <input type="text" placeholder="入住人数" />
+                <i></i>
+            </div>
+            <a class="search_btn" href="javascript:;">
+                <span></span>
+            </a>
+        </div>
+        <div class="hotel_content">
+            <!-- 排序 -->
+            <div class="hotel_sort_wraper">
+                <div class="hotel_sort">
+                    <span>综合排序</span>
+                    <span>销量</span>
+                    <span>价格</span>
+                    <span>
+                        <a class="triangle_up" href="javascript:;"></a >
+                        <a class="triangle_down" href="javascript:;"></a>
+                    </span>
+                </div>
+            </div>
+            <!-- 酒店信息 -->
+            <div class="hotel_content_main">
+                <div class="hotel_main_info">
+                    <i></i>
+                    <div class="info_img">
+                        <img src="./images/hotel/hotel01.jpeg" alt="" />
+                    </div>
+                    <div class="info_text">
+                        <div class="hotel_info">
+                            <h3>东京京王广场酒店</h3>
+                            <div class="score">
+                                <span>Keio Plaza Hotel Tokyo</span>
+                                <div class="stars">
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                </div>
+                                <div class="info_score">
+                                    <div class="score_num">
+                                        <ul>
+                                            <li>8.1分</li>
+                                            <li>很好</li>
+                                        </ul>
+                                    </div>
+                                    <div class="comment">
+                                        <ul>
+                                            <li>714条</li>
+                                            <li>真实评价</li>
+                                        </ul>
+                                    </div>
+                                    <div class="hotel_travels">
+                                        <ul>
+                                            <li>5篇</li>
+                                            <li>游记提及</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="hotel_comment">各国领导来东京下榻的精选酒店之一，新宿站步行10分钟就到，服务和口碑都很好。酒店还有茶道、日式新娘变身等特色体验。</p>
+                            <div class="local">
+                                <span>位于</span>
+                                <em>京王广场</em>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 价格 -->
+                    <div class="hotel_price">
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="./images/hotel/mfw.png" alt="" />
+                                    <i class="zfb"></i>
+                                    <i class="weixin"></i>
+                                    <div class="price_info">
+                                        ￥1574
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="./images/hotel/booking.png" alt="" />
+                                    <div class="price_info">
+                                        ￥338
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>携程</span>
+                                    <div class="price_info">
+                                        ￥574
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>有鱼订房</span>
+                                    <i class="zfb"></i>
+                                    <i class="weixin"></i>
+                                    <div class="price_info">
+                                        ￥250.41
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>a g o d a</span>
+                                    <div class="price_info">
+                                        ￥1111
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hotel_main_info">
+                    <i></i>
+                    <div class="info_img">
+                        <img src="./images/hotel/hotel01.jpeg" alt="" />
+                    </div>
+                    <div class="info_text">
+                        <div class="hotel_info">
+                            <h3>东京京王广场酒店</h3>
+                            <div class="score">
+                                <span>Keio Plaza Hotel Tokyo</span>
+                                <div class="stars">
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                </div>
+                                <div class="info_score">
+                                    <div class="score_num">
+                                        <ul>
+                                            <li>8.1分</li>
+                                            <li>很好</li>
+                                        </ul>
+                                    </div>
+                                    <div class="comment">
+                                        <ul>
+                                            <li>714条</li>
+                                            <li>真实评价</li>
+                                        </ul>
+                                    </div>
+                                    <div class="hotel_travels">
+                                        <ul>
+                                            <li>5篇</li>
+                                            <li>游记提及</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="hotel_comment">各国领导来东京下榻的精选酒店之一，新宿站步行10分钟就到，服务和口碑都很好。酒店还有茶道、日式新娘变身等特色体验。</p>
+                            <div class="local">
+                                <span>位于</span>
+                                <em>京王广场</em>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 价格 -->
+                    <div class="hotel_price">
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="./images/hotel/mfw.png" alt="" />
+                                    <i class="zfb"></i>
+                                    <i class="weixin"></i>
+                                    <div class="price_info">
+                                        ￥1574
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="./images/hotel/booking.png" alt="" />
+                                    <div class="price_info">
+                                        ￥338
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>携程</span>
+                                    <div class="price_info">
+                                        ￥574
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>有鱼订房</span>
+                                    <i class="zfb"></i>
+                                    <i class="weixin"></i>
+                                    <div class="price_info">
+                                        ￥250.41
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>a g o d a</span>
+                                    <div class="price_info">
+                                        ￥1111
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hotel_main_info">
+                    <i></i>
+                    <div class="info_img">
+                        <img src="./images/hotel/hotel01.jpeg" alt="" />
+                    </div>
+                    <div class="info_text">
+                        <div class="hotel_info">
+                            <h3>东京京王广场酒店</h3>
+                            <div class="score">
+                                <span>Keio Plaza Hotel Tokyo</span>
+                                <div class="stars">
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                    <a href="javascript:;"></a>
+                                </div>
+                                <div class="info_score">
+                                    <div class="score_num">
+                                        <ul>
+                                            <li>8.1分</li>
+                                            <li>很好</li>
+                                        </ul>
+                                    </div>
+                                    <div class="comment">
+                                        <ul>
+                                            <li>714条</li>
+                                            <li>真实评价</li>
+                                        </ul>
+                                    </div>
+                                    <div class="hotel_travels">
+                                        <ul>
+                                            <li>5篇</li>
+                                            <li>游记提及</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="hotel_comment">各国领导来东京下榻的精选酒店之一，新宿站步行10分钟就到，服务和口碑都很好。酒店还有茶道、日式新娘变身等特色体验。</p>
+                            <div class="local">
+                                <span>位于</span>
+                                <em>京王广场</em>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 价格 -->
+                    <div class="hotel_price">
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="./images/hotel/mfw.png" alt="" />
+                                    <i class="zfb"></i>
+                                    <i class="weixin"></i>
+                                    <div class="price_info">
+                                        ￥1574
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="./images/hotel/booking.png" alt="" />
+                                    <div class="price_info">
+                                        ￥338
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>携程</span>
+                                    <div class="price_info">
+                                        ￥574
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>有鱼订房</span>
+                                    <i class="zfb"></i>
+                                    <i class="weixin"></i>
+                                    <div class="price_info">
+                                        ￥250.41
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>a g o d a</span>
+                                    <div class="price_info">
+                                        ￥1111
+                                        <i></i>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+    </div>
     <footer>
         <div class="footer">
             <dl class="guide">

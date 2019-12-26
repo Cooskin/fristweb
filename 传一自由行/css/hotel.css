@@ -1,3 +1,341 @@
 #search {
     display: block;
 }
+
+input {
+    outline-style: none;
+}
+
+
+/* 酒店搜索 */
+
+.hotel_wraper {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.hotel_search {
+    width: 1080px;
+    height: 180px;
+    padding: 0 60px;
+    margin: 0 auto;
+}
+
+.hotel_search>div {
+    position: relative;
+}
+
+.hotel_search i {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 20px;
+    top: 10px;
+    background-image: url(../images/hotel-bg.png);
+    background-position: -190px 0;
+}
+
+.number i {
+    background-position: -70px -140px;
+}
+
+.hotel_search h2 {
+    height: 80px;
+    line-height: 80px;
+    font-weight: normal;
+    font-size: 24px;
+    text-indent: 0px;
+}
+
+.hotel_search div {
+    float: left;
+}
+
+.hotel_search input {
+    height: 40px;
+    width: 200px;
+    text-indent: 10px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    margin: 0 10px 0 2px;
+}
+
+.search_local input {
+    width: 340px;
+}
+
+.search_btn {
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+    padding: 11px 10px;
+    border-radius: 4px;
+    background-color: #ff9d00;
+}
+
+.search_btn:hover {
+    background-color: #e99000;
+}
+
+.search_btn span {
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+    background-image: url(../images/hotel-bg1.png);
+    background-position: 0 35px;
+}
+
+
+/* 酒店内容 */
+
+.hotel_content {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+
+/* 排序 */
+
+.hotel_sort_wraper {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.hotel_sort {
+    float: right;
+}
+
+.hotel_sort span {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    margin-right: 8px;
+}
+
+.hotel_sort .triangle_up {
+    vertical-align: top;
+    margin: 4px 4px 0;
+}
+
+.hotel_sort .triangle_down {
+    vertical-align: bottom;
+    margin: 0 -12px 4px;
+    border-top-color: #ff9d00;
+}
+
+
+/* 酒店信息 */
+
+.hotel_content_main {
+    width: 100%;
+    height: 900px;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+.hotel_main_info {
+    height: 220px;
+    width: 100%;
+    padding: 30px 0;
+    position: relative;
+    border-bottom: 1px dotted #999;
+}
+
+.hotel_main_info>i::after {
+    content: '收藏';
+    position: absolute;
+    width: 30px;
+    top: -4px;
+    right: -35px;
+    font-style: normal;
+    background: #fff;
+}
+
+.hotel_main_info>i {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 40px;
+    right: 34px;
+    background: url(../images/hotel-bg.png)no-repeat;
+    background-position: -130px -50px;
+}
+
+.info_img,
+.info_text {
+    width: 300px;
+    height: 220px;
+    margin-right: 20px;
+    float: left;
+}
+
+.info_img img,
+.hotel_info {
+    width: 100%;
+    height: 100%;
+}
+
+.info_text span {
+    color: #999;
+}
+
+.hotel_info h3 {
+    font-weight: normal;
+    font-size: 18px;
+    height: 30px;
+}
+
+.score {
+    width: 100%;
+    float: left;
+}
+
+.score>div,
+.score>p,
+.score>span {
+    float: left;
+}
+
+.score>span {
+    height: 24px;
+    line-height: 24px;
+}
+
+.stars {
+    width: 130px;
+    margin-left: 10px;
+}
+
+.hotel_info a {
+    content: '';
+    display: block;
+    float: left;
+    margin: 5px 0;
+    height: 15px;
+    width: 10px;
+    background: url(../images/hotel-bg.png) -290px -110px;
+}
+
+.info_score {
+    width: 100%;
+    height: 70px;
+    float: left;
+}
+
+.info_score div {
+    width: 70px;
+    height: 100%;
+    margin-right: 10px;
+    float: left;
+    text-align: center;
+}
+
+.info_score ul {
+    margin-top: 15px;
+}
+
+.score_num {
+    background-image: url(../images/hotel-bg.png);
+}
+
+.hotel_comment {
+    line-height: 22px;
+}
+
+.local {
+    height: 30px;
+    line-height: 30px;
+}
+
+.local span::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/hotel-bg.png);
+    background-position: -130px 0;
+    margin-right: 4px;
+}
+
+
+/* 价格 */
+
+.hotel_price {
+    width: 320px;
+    height: 150px;
+    float: right;
+    margin-top: 70px;
+}
+
+.hotel_price ul {
+    height: 100%;
+}
+
+.hotel_price li {
+    padding-left: 10px;
+    height: 20%;
+    line-height: 44px;
+    border-bottom: 1px dotted #e0e0e0;
+}
+
+.hotel_price a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.hotel_price img {
+    width: 80px;
+    height: 20px;
+    margin-top: 5px;
+    float: left;
+}
+
+.hotel_price span {
+    display: block;
+    float: left;
+    line-height: 30px;
+    word-spacing: -3px;
+}
+
+.price_info {
+    float: right;
+    height: 20px;
+    width: 102px;
+    line-height: 20px;
+    padding-left: 20px;
+    margin: 5px 0;
+    border-left: 1px dotted #e0e0e0;
+    text-align: right;
+}
+
+.price_info i {
+    display: inline-block;
+    width: 10px;
+    height: 13px;
+    background-image: url(../images/hotel-bg.png);
+    background-position: -190px -30px;
+    margin-left: 20px;
+}
+
+.zfb,
+.weixin {
+    display: block;
+    float: left;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/hotel-bg.png);
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
+.zfb {
+    background-position: -250px 0;
+}
+
+.weixin {
+    background-position: -250px -15px;
+}
