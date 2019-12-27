@@ -5,23 +5,29 @@ var aImgLi = oBannerImg.children;
 var aNavLi = oBannerNav.children;
 
 var bannerNum = 0;
-setInterval(function() {
-    bannerNum++;
-    if (bannerNum >= aImgLi.length) {
-        bannerNum = 0;
-    }
-    banner();
-}, 3000)
+
+var timer;
+
+bannerOn();
+
+function bannerOn() {
+    timer = setInterval(function() {
+        bannerNum++;
+        if (bannerNum >= aImgLi.length) {
+            bannerNum = 0;
+        }
+        banner();
+    }, 3000)
+}
 
 function banner() {
     for (var i = 0; i < aNavLi.length; i++) {
         aNavLi[i].className = '';
         aImgLi[i].className = '';
     }
-    aNavLi[bannerNum].className = 'activ';
     aImgLi[bannerNum].className = 'dis';
+    aNavLi[bannerNum].className = 'activ';
 }
-
 for (var i = 0; i < aNavLi.length; i++) {
     aNavLi[i].index = i;
     aNavLi[i].onclick = function() {
@@ -33,4 +39,14 @@ for (var i = 0; i < aNavLi.length; i++) {
         aImgLi[this.index].className = 'dis';
         bannerNum = this.index
     }
+
+    oBanner.onmouseover = function() {
+        clearInterval(timer);
+    }
+
+    oBanner.onmouseout = function() {
+        clearInterval(timer);
+        bannerOn();
+    }
+
 }

@@ -6,16 +6,21 @@
 
 .banner_img img {
     width: 100%;
+    /* transition: 2s; */
     height: 450px;
 }
 
 .banner_img li {
+    transition: 2s;
     display: none;
+    opacity: 0.8;
+    animation: loading-photo 1s ease 0s infinite normal running;
 }
 
 .banner_img .dis {
-    display: block;
-    transition: 1s;
+    display: list-item;
+    /* opacity: 1; */
+    /* transition: 0.5s; */
 }
 
 

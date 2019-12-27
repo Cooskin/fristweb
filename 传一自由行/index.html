@@ -7,8 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>传一自由行</title>
     <link rel="icon" href="images/cy.ico" />
-    <link rel="stylesheet" href="./css/header_footer.css">
+    <link rel="stylesheet" href="./css/header_footer.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/register.css" />
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 
 <body>
@@ -109,6 +111,7 @@
                 <a href="" target="_blank"><img src="./images/banner/5.png" alt=""></a>
             </li>
         </ul>
+        <!-- 缩略图 -->
         <ul class="banner_nav">
             <li class="activ"><img src="./images/banner/1.png" alt=""></li>
             <li><img src="./images/banner/2.png" alt=""></li>
@@ -117,6 +120,7 @@
             <li><img src="./images/banner/5.png" alt=""></li>
         </ul>
         <a href="javascript:;"></a>
+        <!-- 搜索 -->
         <div class="banner_search">
             <div class="search_top">
                 <ul>
@@ -192,6 +196,7 @@
                         </li>
                     </ul>
                 </div>
+                <!-- 热卖游记 -->
                 <div class="hot_travels" id="dis">
                     <ul>
                         <li>
@@ -255,7 +260,6 @@
                                 <a href="javascript:;">
                                     <img src="./images/content/travels.jpg" alt="">
                                 </a>
-
                             </div>
                             <div class="travels_text">
                                 <h3><a href="">美国旧金山大桥</a></h3>
@@ -308,6 +312,7 @@
                         </li>
                     </ul>
                 </div>
+                <!-- 最新游记 -->
                 <div class="new_travels">
                     <ul>
                         <li>
@@ -315,7 +320,6 @@
                                 <a href="javascript:;">
                                     <img src="./images/content/travels.jpg" alt="">
                                 </a>
-
                             </div>
                             <div class="travels_text">
                                 <h3><a href="">美国旧金山大桥</a></h3>
@@ -424,11 +428,13 @@
                         </li>
                     </ul>
                 </div>
+                <!-- 页码 -->
                 <div class="page"></div>
             </div>
         </div>
     </div>
     <footer>
+        <!-- 底部 -->
         <div class="footer">
             <dl class="guide">
                 <dt>全球旅游消费指南</dt>
@@ -486,6 +492,50 @@
         </div>
 
     </footer>
+    <!-- 注册 -->
+    <div class="register">
+        <div class="account_wrap">
+
+            <div class="content_top">账号注册
+                <a href="./index.html"></a>
+            </div>
+
+            <div class="content">
+                <div></div>
+                <input type="text" placeholder="您的名号">
+                <input type="text" placeholder="您的手机号码">
+                <input type="password" placeholder="您的登录密码">
+                <input type="password" placeholder="再次确认密码">
+                <a href="javascript:;">立即注册</a>
+                <span>注册即视为同意<a href="javascript:;">《传一自由行用户协议》</a></span>
+            </div>
+
+            <div class="content_bottom">已经注册？<a href="./login.html">马上登录</a></div>
+
+        </div>
+    </div>
+    <!-- 登录 -->
+    <div class="login">
+        <div class="account_wrap">
+            <div class="content_top">账号登录
+                <a href="./index.html"></a>
+            </div>
+            <div class="content">
+                <div></div>
+                <input type="text" placeholder="您的手机号码">
+                <input type="password" placeholder="您的密码">
+                <div class="pass"><a href="javascript:;">忘记密码</a></div>
+                <a href="javascript:;">立即登录</a>
+            </div>
+            <div class="content_bottom">
+                <div>合作网站账户直接登录</div>
+                <a class="login_weibo" href="#"></a>
+                <a class="login_qq" href="#"></a>
+                <a class="login_weixin" href="#"></a>
+            </div>
+            <div class="content_target">没有账号？<a href="./register.html">马上注册</a></div>
+        </div>
+    </div>
     <script src="./js/index.js"></script>
 </body>
 
