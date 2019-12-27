@@ -94,7 +94,7 @@ function accReg() {
 function pasReg() {
     if (registerInp[2].value != '') {
         if (registerInp[2].value.match(passReg) == null) {
-            oTips.innerHTML = '至少一个字母或数字，且不少于4个字符';
+            oTips.innerHTML = '至少一个字母或数字，且不少于6个字符';
             oTips.className = 'tips';
             registerInp[2].style.border = '1px solid #ff0000';
         } else {
