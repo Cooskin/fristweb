@@ -1,0 +1,228 @@
+.container_head {
+    border-bottom: 1px solid #ccc;
+}
+
+.title,
+.nav_wraper,
+.container_info,
+.hot_hotel,
+.hot_scenery {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.crumb {
+    height: 30px;
+    line-height: 30px;
+}
+
+.crumb div {
+    float: left;
+}
+
+.crumb a,
+.crumb span {
+    color: #777;
+}
+
+.crumb a:hover,
+.images a:hover {
+    text-decoration: underline;
+}
+
+.crumb span {
+    margin: 0 8px;
+    font-family: 'simsun';
+}
+
+.info {
+    height: 80px;
+}
+
+.info h1 {
+    font-weight: normal;
+    font-size: 30px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.info h1,
+.images {
+    display: inline-block;
+}
+
+.images a {
+    color: #666;
+}
+
+.info div {
+    font-size: 16px;
+    color: #999;
+}
+
+.nav_wraper {
+    height: 54px;
+}
+
+.nav_wraper li {
+    float: left;
+    margin-right: 25px;
+}
+
+.nav_wraper li:hover {
+    border-bottom: 3px solid #33f;
+}
+
+.nav_wraper a {
+    padding: 10px 0;
+    display: inline-block;
+    height: 32px;
+}
+
+.nav_wraper .hidden {
+    display: none;
+}
+
+.nav_wraper a::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    margin-right: 6px;
+    background-image: url(../images/mdd_dateils/nav1.png);
+}
+
+.nav_wraper .nav_dateils::before {
+    background-position: 0 0;
+}
+
+.nav_wraper .nav_scenery::before {
+    background-position: 0 -320px;
+}
+
+.nav_wraper .nav_mdd::before {
+    background-position: 0 -80px;
+}
+
+.nav_wraper .nav_hotel::before {
+    background-position: 0 -120px;
+}
+
+.nav_wraper .nav_recreation::before {
+    background-position: 0 -200px;
+}
+
+.nav_wraper .nav_insure::before {
+    background-position: 0 -160px;
+}
+
+.nav_wraper .nav_Community::before {
+    background-position: 0 -240px;
+}
+
+.nav_wraper .nav_restaurant::before {
+    background-position: 0 -360px;
+}
+
+.nav_wraper .nav_map::before {
+    background-position: 0 -400px;
+}
+
+.container_info {
+    height: 360px;
+    padding: 20px 0;
+}
+
+.img {
+    float: left;
+}
+
+.img img {
+    width: 700px;
+    height: 360px;
+}
+
+.map {
+    float: right;
+}
+
+
+/* 热门景点 */
+
+h4 {
+    height: 40px;
+    line-height: 40px;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.images_wraper {
+    width: 100%;
+    height: 310px;
+    position: relative;
+}
+
+.big_image {
+    float: left;
+    width: 480px;
+    height: 300px;
+    position: relative;
+}
+
+.small_image {
+    float: left;
+    width: 240px;
+    height: 140px;
+    position: relative;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.big_image img,
+.small_image img,
+.info_show {
+    width: 100%;
+    height: 100%;
+}
+
+.big_image {
+    margin: 0 10px;
+}
+
+.small_image {
+    margin: 0 10px 10px 0;
+}
+
+.info_show {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    z-index: -1;
+}
+
+.big_image:hover .info_show,
+.small_image:hover .info_show {
+    z-index: 0;
+}
+
+
+/* 热门酒店 */
+
+.hotel_sort_wraper h3 {
+    float: left;
+    line-height: 40px;
+}

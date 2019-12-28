@@ -21,14 +21,14 @@ function bannerOn() {
 }
 
 function banner() {
-    for (var i = 0; i < aNavLi.length; i++) {
+    for (let i = 0; i < aNavLi.length; i++) {
         aNavLi[i].className = '';
         aImgLi[i].className = '';
     }
     aImgLi[bannerNum].className = 'dis';
     aNavLi[bannerNum].className = 'activ';
 }
-for (var i = 0; i < aNavLi.length; i++) {
+for (let i = 0; i < aNavLi.length; i++) {
     aNavLi[i].index = i;
     aNavLi[i].onclick = function() {
         for (var j = 0; j < aNavLi.length; j++) {

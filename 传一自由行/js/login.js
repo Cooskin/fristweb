@@ -38,69 +38,112 @@ var registerInp = oRegister.getElementsByTagName('input');
 var loginInp = oLogin.getElementsByTagName('input');
 var oTips = oRegister.getElementsByClassName('content')[0].firstElementChild;
 var userName = registerInp[0].value;
-// var acc = registerInp[1].value;
-// var pass = registerInp[2].value;
 var detpass = registerInp[3].value;
 
-// var pZhReg = acc.match(phoneReg);
-// var pMaReg = pass.match(passReg);
-
 // 注册判断
-// for (var i = 0; i < registerInp.length; i++) {
-//     registerInp[i].onfocus = function() {
-//         this.style.border = '1px solid #ff9d00';
-//     }
-//     registerInp[i].onblur = function() {
-//         this.style.border = '1px solid transparent';
-//     }
-// }
-registerInp[1].onkeyup = function() {
-    accReg();
-}
-registerInp[1].onfocus = function() {
-    this.style.border = '1px solid #ff9d00';
-    accReg();
-}
-registerInp[1].onblur = function() {
-    this.style.border = '1px solid transparent';
-    accReg();
-}
-registerInp[2].onkeyup = function() {
-    pasReg();
-}
-registerInp[2].onfocus = function() {
-    this.style.border = '1px solid #ff9d00';
-    pasReg();
-}
-registerInp[2].onblur = function() {
-    this.style.border = '1px solid transparent';
-    pasReg();
+for (let i = 0; i <= 3; i++) {
+    registerInp[i].onfocus = function(i) {
+        this.style.border = '1px solid #ff9d00';
+        accReg(i);
+    }
+    registerInp[i].onblur = function() {
+        this.style.border = '1px solid transparent';
+        accReg(i);
+    }
+    registerInp[i].onkeyup = function() {
+        accReg(i);
+    }
 }
 
-function accReg() {
-    if (registerInp[1].value != '') {
-        if (registerInp[1].value.match(phoneReg) == null) {
-            oTips.innerHTML = '手机号码格式不正确';
-            oTips.className = 'tips';
-            registerInp[1].style.border = '1px solid #ff0000';
+function accReg(num) {
+    if (num == 0) {
+        if (registerInp[num].value != '') {
+            if (registerInp[num].value.length > 11) {
+                oTips.innerHTML = '名字太长了，请小于12个字符';
+                oTips.className = 'tips';
+                registerInp[num].style.border = '1px solid #f00';
+
+            } else {
+                oTips.innerHTML = '';
+                oTips.className = '';
+                registerInp[num].style.border = '1px solid #0f0';
+            }
         } else {
             oTips.innerHTML = '';
-            oTips.className = 'none';
-            registerInp[1].style.border = '1px solid #0f0';
+            oTips.className = '';
+        }
+    } else if (num == 1) {
+        if (registerInp[num].value != '') {
+            if (registerInp[num].value.match(phoneReg) == null) {
+                oTips.innerHTML = '手机号码格式不正确';
+                oTips.className = 'tips';
+                registerInp[num].style.border = '1px solid #ff0000';
+            } else {
+                oTips.innerHTML = '';
+                oTips.className = '';
+                registerInp[num].style.border = '1px solid #0f0';
+            }
+        } else {
+            oTips.innerHTML = '';
+            oTips.className = '';
+        }
+    } else if (num == 2) {
+        if (registerInp[num].value != '') {
+            if (registerInp[num].value.match(passReg) == null) {
+                oTips.innerHTML = '至少一个字母和数字，且不少于6个字符';
+                oTips.className = 'tips';
+                registerInp[num].style.border = '1px solid #ff0000';
+            } else {
+                oTips.innerHTML = '';
+                oTips.className = '';
+                registerInp[num].style.border = '1px solid #0f0';
+            }
+        } else {
+            oTips.innerHTML = '';
+            oTips.className = '';
+        }
+    } else if (num == 3) {
+        if (registerInp[num].value != '' && registerInp[2].value.match(passReg) != null) {
+            if (registerInp[num].value == registerInp[2].value) {
+                oTips.innerHTML = '';
+                oTips.className = '';
+                registerInp[num].style.border = '1px solid #0f0';
+            } else {
+                oTips.className = 'tips';
+                oTips.innerHTML = '密码不一致';
+                registerInp[num].style.border = '1px solid #f00';
+            }
+        } else {
+            oTips.innerHTML = '';
+            oTips.className = '';
         }
     }
 }
 
-function pasReg() {
-    if (registerInp[2].value != '') {
-        if (registerInp[2].value.match(passReg) == null) {
-            oTips.innerHTML = '至少一个字母或数字，且不少于6个字符';
-            oTips.className = 'tips';
-            registerInp[2].style.border = '1px solid #ff0000';
-        } else {
-            oTips.innerHTML = '';
-            oTips.className = 'none';
-            registerInp[2].style.border = '1px solid #0f0';
+var oUserInfo = {
+    name: registerInp[0].value,
+    account: registerInp[1].value,
+    password: registerInp[2].value,
+    gold: 0
+}
+
+if (localStorage.getItem('HX191110_userArr') == null) {
+    var oUserArr = [];
+} else {
+    var oUserArr = JSON.parse(localStorage.getItem('HX191110_userArr'));
+}
+
+if (registerInp[0].value != '' &&
+    registerInp[1].value.match(passReg) != null &&
+    registerInp[2].value.match(passReg) != null &&
+    registerInp[3].value == registerInp[2].value) {
+
+    for (let i = 0; i < oUserArr.length; i++) {
+        // 判断 用户输入的账号是否与本地的出现重复
+        if (oUserArr[i].account == obj.account) {
+            // 给提示 并改变标记
+            alert('该账号已存在');
+            flag = 1;
         }
     }
 }
