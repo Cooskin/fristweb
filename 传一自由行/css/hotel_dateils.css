@@ -1,0 +1,31 @@
+.hotel_header {
+    width: 1100px;
+    margin: 10px auto;
+}
+
+
+/* 面包屑 */
+
+.crumb {
+    height: 30px;
+    line-height: 30px;
+}
+
+.crumb div {
+    float: left;
+}
+
+.crumb a,
+.crumb span {
+    color: #777;
+}
+
+.crumb a:hover,
+.images a:hover {
+    text-decoration: underline;
+}
+
+.crumb span {
+    margin: 0 8px;
+    font-family: 'simsun';
+}
