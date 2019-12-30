@@ -27,6 +27,7 @@ function targetClick(btn, block, none) {
         none.style.display = 'none';
     }
 }
+
 targetClick(toLogin, oLogin, oRegister);
 targetClick(toRegister, oRegister, oLogin);
 
@@ -120,30 +121,49 @@ function accReg(num) {
     }
 }
 
-var oUserInfo = {
-    name: registerInp[0].value,
-    account: registerInp[1].value,
-    password: registerInp[2].value,
-    gold: 0
-}
 
-if (localStorage.getItem('HX191110_userArr') == null) {
-    var oUserArr = [];
-} else {
-    var oUserArr = JSON.parse(localStorage.getItem('HX191110_userArr'));
-}
 
-if (registerInp[0].value != '' &&
-    registerInp[1].value.match(passReg) != null &&
-    registerInp[2].value.match(passReg) != null &&
-    registerInp[3].value == registerInp[2].value) {
 
-    for (let i = 0; i < oUserArr.length; i++) {
-        // 判断 用户输入的账号是否与本地的出现重复
-        if (oUserArr[i].account == obj.account) {
-            // 给提示 并改变标记
-            alert('该账号已存在');
-            flag = 1;
+
+// 注册
+var oRegisterBtn = document.getElementsByClassName('register_on')[0];
+oRegisterBtn.onclick = function() {
+        if (localStorage.getItem('HX191110_userArr') == null) {
+            var oUserArr = [];
+        } else {
+            var oUserArr = JSON.parse(localStorage.getItem('HX191110_userArr'));
+        }
+        var oUserInfo = {
+            name: registerInp[0].value,
+            account: registerInp[1].value,
+            password: registerInp[2].value,
+            gold: 0
+        }
+        if (registerInp[0].value != '' && registerInp[1].value.match(phoneReg) != null && registerInp[2].value.match(passReg) != null && registerInp[3].value == registerInp[2].value) {
+            if (oUserArr.length == 0) {
+                oUserArr.push(oUserInfo);
+                var userArr = JSON.stringify(oUserArr);
+                localStorage.setItem('HX191110_userArr', userArr);
+                alert('注册成功')
+            } else {
+                for (var i = 0; i < oUserArr.length; i++) {
+                    // 判断 用户输入的账号是否与本地的出现重复
+                    if (oUserArr[i].account != oUserInfo.account) {
+                        oUserArr.push(oUserInfo);
+                        var userArr = JSON.stringify(oUserArr);
+                        localStorage.setItem('HX191110_userArr', userArr);
+                        alert('注册成功')
+                        oLogin.style.display = 'block';
+                        oRegister.style.display = 'none';
+                        return;
+                    }
+                }
+                // 给提示
+                alert('该账号已存在');
+            }
+        } else {
+            alert('填写信息有误')
         }
     }
-}
+    // 登录
+    // if(registerInp[1].value.match(phoneReg) != null && registerInp[2].value.match(passReg) != null){}
