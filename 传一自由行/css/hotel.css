@@ -209,7 +209,6 @@ input {
 }
 
 .hotel_info a {
-    content: '';
     display: block;
     float: left;
     margin: 5px 0;
