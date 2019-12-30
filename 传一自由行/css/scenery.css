@@ -1,0 +1,58 @@
+.crumb_wraper,
+.scenery_header {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.border_wrap {
+    border-bottom: 1px solid #aaa;
+}
+
+.crumb {
+    height: 30px;
+    line-height: 30px;
+}
+
+.crumb div {
+    margin-right: 6px;
+    float: left;
+}
+
+.crumb a,
+.crumb span {
+    color: #777;
+}
+
+.crumb a:hover,
+.images a:hover {
+    text-decoration: underline;
+}
+
+.crumb span {
+    margin: 0 8px;
+    font-family: 'simsun';
+}
+
+.scenery_header h1 {
+    font-weight: normal;
+    font-size: 26px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #eee;
+}
+
+.scenery_header a {
+    display: inline-block;
+    padding: 20px;
+    border-bottom: 2px solid #ff9d00;
+}
+
+.scenery_header span {
+    float: right;
+    line-height: 60px;
+}
+
+.scenery_header em {
+    font-size: 18px;
+    color: #ff9d00;
+}
