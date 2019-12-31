@@ -36,29 +36,35 @@ backBtn.onclick = function() {
 }
 var aCheck = document.getElementsByName('gold');
 
-// function doSubmit1(actionName) {
-//     var obj = document.getElementsByName("cycle_unit");
-//     var flags = false;
-var oGoldNumber = document.getElementById('gold_number');
+
 chargeBtn.onclick = function() {
-    console.log(parseInt(oGoldNumber.value));
-    var userArr = JSON.parse(localStorage.getItem('HX191110_userArr'));
-    for (let i = 0; i < userArr.length; i++) {
+    var oGoldNumber = document.getElementById('gold_number').value;
+    let userArr = JSON.parse(localStorage.getItem('HX191110_userArr'));
+    for (var i = 0; i < userArr.length; i++) {
         if (userArr[i].name == JSON.parse(localStorage.getItem('HX191110_log'))) {
-            if (parseInt(oGoldNumber.value) != 0) {
-                userArr[i].gold += parseInt(oGoldNumber.value);
 
+            if (oGoldNumber != '') {
+                // console.log(typeof oGoldNumber)
+                // console.log(isNaN(oGoldNumber));
+                // console.log(oGoldNumber);
+                userArr[i].gold += parseInt(oGoldNumber);
+                localStorage.setItem('HX191110_userArr', JSON.stringify(userArr))
+                location.reload();
+            } else {
+                for (let j = 0; j < aCheck.length; j++) {
+                    if (aCheck[j].checked == true) {
+                        userArr[i].gold += parseInt(aCheck[j].value);
+                        localStorage.setItem('HX191110_userArr', JSON.stringify(userArr))
+                        location.reload();
+                    }
+                }
             }
+            return;
         }
     }
 
 
-    for (let i = 0; i < aCheck.length; i++) {
-        if (aCheck[i].checked == true) {
-            // flags = true;
-            console.log(aCheck[i].value)
-        }
-    }
+    // 
 }
 
 // for (var i = 0; i < aCheck.length; i++) {

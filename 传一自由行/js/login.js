@@ -218,7 +218,7 @@ oLoginBtn.onclick = function() {
         oLoginTips.className = '';
 
         if (loginInp[0].value.match(phoneReg) != null && loginInp[1].value.match(passReg) != null && loginInp[2].value != '') {
-            var oUserArr = JSON.parse(localStorage.getItem('HX191110_userArr'));
+            let oUserArr = JSON.parse(localStorage.getItem('HX191110_userArr'));
             for (let i = 0; i < oUserArr.length; i++) {
                 if (oUserArr[i].account == loginInp[0].value && oUserArr[i].password == loginInp[1].value && loginInp[2].value == code) {
                     alert('登陆成功');
