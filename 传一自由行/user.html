@@ -8,6 +8,7 @@
     <title>个人中心-传一自由行</title>
     <link rel="icon" href="./images/cy.ico">
     <link rel="stylesheet" href="./css/header_footer.css">
+    <link rel="stylesheet" href="./css/user.css" />
 </head>
 
 <body>
@@ -70,11 +71,11 @@
                 <!-- 已登录 -->
                 <div id="user" style="display: none;">
                     <div class="head_user">
-                        <div class="triangle_down"></div>
+                        <div class="triangle_up"></div>
                         <ul>
                             <li>
                                 <div class="user"></div>
-                                <a href="javascript:;">个人中心</a>
+                                <a href="./user.html">个人中心</a>
                             </li>
                             <li>
                                 <div class="out"></div>
@@ -89,7 +90,88 @@
         </div>
 
     </header>
-
+    <div class="nav_wraper">
+        <div class="user_nav">
+            <ul>
+                <li class="activ">
+                    <a href="javscript:;">我的信息</a>
+                </li>
+                <li>
+                    <a href="javscript:;">我的游记</a>
+                </li>
+                <li>
+                    <a href="javscript:;">我的订单</a>
+                </li>
+                <li>
+                    <a href="javscript:;">我的收藏</a>
+                </li>
+                <li>
+                    <a href="javscript:;">我的优惠券</a>
+                </li>
+                <li>
+                    <a href="javscript:;">我的兑换</a>
+                </li>
+                <li>
+                    <a href="javscript:;">我的路线</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="user_info">
+            <div class="left_wraper">
+                <div class="image">
+                    <img src="./images/login/user1.png" alt="">
+                </div>
+                <div class="info">
+                    <p class="user_name">
+                        <em>昵称：</em>
+                        <span></span>
+                        <a href="javascript:;">修改</a>
+                    </p>
+                    <p class="phone">
+                        <em>手机：</em>
+                        <span></span>
+                        <a href="javascript:;">修改</a>
+                    </p>
+                    <p class="gold">
+                        <em>金币：</em>
+                        <span></span>
+                        <a href="javascript:;">充值</a>
+                    </p>
+                    <div class="charge">
+                        <div>
+                            <div class="head">金币充值</div>
+                            <div class="inp_wraper">
+                                <input id="one_thousand" type="radio" name="gold" value="1000">
+                                <label for="one_thousand">1000 金币</label>
+                            </div>
+                            <div class="inp_wraper">
+                                <input id="three_thousand" type="radio" name="gold" value="3000">
+                                <label for="three_thousand">3000 金币</label>
+                            </div>
+                            <div class="inp_wraper">
+                                <input id="five_thousand" type="radio" name="gold" value="5000">
+                                <label for="five_thousand">5000 金币</label>
+                            </div>
+                            <div class="inp_wraper">
+                                <input id="ten_thousand" type="radio" name="gold" value="10000">
+                                <label for="ten_thousand">10000 金币</label>
+                            </div>
+                            <div class="inp_wraper">
+                                自定义金额充值：
+                                <input id="gold_number" type="text"> 金币
+                            </div>
+                            <div class="btn">
+                                <a href="javascript:;">确定充值</a>
+                                <a href="javascript:;">取消充值</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- 底部 -->
@@ -184,6 +266,10 @@
                 <div></div>
                 <input type="text" placeholder="您的手机号码">
                 <input type="password" placeholder="您的密码">
+                <div class="register_code">
+                    <input type="text" placeholder="输入验证码">
+                    <div>获取验证码</div>
+                </div>
                 <div class="pass"><a href="javascript:;">忘记密码</a></div>
                 <a href="javascript:;">立即登录</a>
             </div>
@@ -197,6 +283,7 @@
         </div>
     </div>
     <script src="./js/login.js"></script>
+    <script src="./js/user.js"></script>
 </body>
 
 </html>

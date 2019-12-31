@@ -490,31 +490,6 @@ footer {
     text-decoration: underline;
 }
 
-.content .register_code {
-    width: 300px;
-    height: 50px;
-    padding: 0;
-}
-
-.register_code input {
-    width: 100px;
-    height: 30px;
-    float: left;
-    border-radius: 0;
-}
-
-.register_code>div {
-    float: left;
-    padding: 0 10px;
-    height: 32px;
-    line-height: 32px;
-    text-align: center;
-    background-color: #ddd5d5;
-    color: #333;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
 .register .content_bottom {
     width: 180px;
     height: 30px;
@@ -540,8 +515,7 @@ footer {
 
 #login {
     width: 100%;
-    height: 650px;
-    overflow: hidden;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -551,7 +525,7 @@ footer {
 
 .account_wrap {
     width: 350px;
-    height: 370px;
+    height: 440px;
     background-color: #fff;
     border-radius: 6px;
     margin: 80px auto;
@@ -579,7 +553,7 @@ footer {
 
 .content {
     width: 300px;
-    height: 200px;
+    height: 265px;
     margin: 0 auto;
 }
 
@@ -629,6 +603,32 @@ footer {
     color: rgb(255, 0, 0);
     padding-left: 20px;
     background: url(../images/login/err_ico2.png)no-repeat -20px -53px;
+}
+
+.content .register_code {
+    width: 300px;
+    height: 50px;
+    padding: 0;
+}
+
+.register_code input {
+    width: 100px;
+    height: 30px;
+    float: left;
+    border-radius: 0;
+}
+
+.register_code>div {
+    float: left;
+    width: 90px;
+    padding: 0 10px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #ddd5d5;
+    color: #333;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 .content_target {
