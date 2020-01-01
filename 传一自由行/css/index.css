@@ -6,21 +6,15 @@
 
 .banner_img img {
     width: 100%;
-    /* transition: 2s; */
     height: 450px;
 }
 
 .banner_img li {
-    transition: 2s;
     display: none;
-    opacity: 0.8;
-    animation: loading-photo 1s ease 0s infinite normal running;
 }
 
 .banner_img .dis {
-    display: list-item;
-    /* opacity: 1; */
-    /* transition: 0.5s; */
+    display: block;
 }
 
 
@@ -150,11 +144,6 @@
     float: left;
 }
 
-.cont_img img {
-    width: 260px;
-    height: 1000px;
-}
-
 .cont_main {
     height: 100%;
     float: left;
@@ -246,37 +235,38 @@
     color: #ff9d00;
 }
 
-.main_bottom #dis,
-.main_bottom #dis {
-    display: block;
-}
-
-.hot_travels,
-.new_travels {
+.travels {
     width: 680px;
-    height: 580px;
     padding: 10px;
-    display: none;
     margin-top: 8px;
-    /* border: 1px solid black; */
 }
 
-.hot_travels li,
-.new_travels li {
+.travels li {
     width: 100%;
     height: 150px;
     padding-bottom: 4px;
+    position: relative;
 }
 
-.hot_travels li:hover,
-.new_travels li:hover {
+.travels li:hover {
     background-color: #ebebeb;
+}
+
+.travels_img,
+.travels h3,
+.travels p {
+    float: left;
+}
+
+.travels h3,
+.travels p {
+    width: 450px;
 }
 
 .travels_img {
     width: 220px;
     height: 150px;
-    float: left;
+    margin-right: 10px;
 }
 
 .travels_img img {
@@ -284,14 +274,7 @@
     height: 100%;
 }
 
-.travels_text {
-    width: 440px;
-    height: 100%;
-    padding: 0 10px;
-    float: left;
-}
-
-.travels_text h3 {
+.travels h3 {
     font-weight: normal;
     font-family: 微软雅黑;
     font-size: 18px;
@@ -299,32 +282,27 @@
     line-height: 30px;
 }
 
-.travels_text p {
+.travels li p {
     height: 70px;
-    margin-top: 10px;
+    margin: 10px 0 15px;
 }
 
-.user_info {
-    height: 40px;
-    line-height: 40px;
-    font-size: 12px;
-}
-
-.user_info span {
+.travels li span {
     color: #999;
 }
 
-.user_info span a {
+.travels li span {
     color: #999;
 }
 
-.user_info a:hover {
+.user_name {
+    color: #ff9d00;
+}
+
+.place:hover,
+.user_name:hover {
     color: #ff9d00;
     text-decoration: underline;
-}
-
-.user_name span {
-    color: #ff9d00;
 }
 
 .place::before,
@@ -354,25 +332,46 @@
     background-position: -30px -49px;
 }
 
-.user_name img {
+.user_img img {
     width: 16px;
     height: 16px;
     border-radius: 50%;
     vertical-align: middle;
 }
 
-.ding {
+.ding_btn {
+    width: 38px;
+    height: 33px;
+    display: block;
+    background: url(../images/bg02.png) -60px 0;
+    margin-top: -8px;
     float: right;
 }
 
-.ding a {
-    width: 38px;
-    height: 33px;
-    display: inline-block;
-    vertical-align: middle;
-    background: url(../images/bg02.png) -60px 0;
+.ding {
+    color: #ff9d00;
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
 }
 
-.ding em {
-    color: #ff9d00;
+
+/* 页码 */
+
+.page {
+    padding: 20px 0;
+}
+
+.page a,
+.page li {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.page a {
+    display: block;
 }

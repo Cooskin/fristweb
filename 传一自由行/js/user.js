@@ -44,9 +44,6 @@ chargeBtn.onclick = function() {
         if (userArr[i].name == JSON.parse(localStorage.getItem('HX191110_log'))) {
 
             if (oGoldNumber != '') {
-                // console.log(typeof oGoldNumber)
-                // console.log(isNaN(oGoldNumber));
-                // console.log(oGoldNumber);
                 userArr[i].gold += parseInt(oGoldNumber);
                 localStorage.setItem('HX191110_userArr', JSON.stringify(userArr))
                 location.reload();
@@ -62,9 +59,8 @@ chargeBtn.onclick = function() {
             return;
         }
     }
-
-
-    // 
+    alert('您还未登录哦！')
+    oCharge.style.display = 'none';
 }
 
 // for (var i = 0; i < aCheck.length; i++) {
