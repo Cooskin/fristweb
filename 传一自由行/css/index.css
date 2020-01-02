@@ -135,8 +135,13 @@
 
 .container {
     width: 1100px;
-    height: 1000px;
     margin: 0 auto;
+}
+
+.container::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 .cont_img {
@@ -283,8 +288,12 @@
 }
 
 .travels li p {
-    height: 70px;
-    margin: 10px 0 15px;
+    height: 60px;
+    margin: 10px 0 25px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 
 .travels li span {
@@ -359,7 +368,8 @@
 /* 页码 */
 
 .page {
-    padding: 20px 0;
+    margin: 20px 0;
+    height: 40px;
 }
 
 .page a,
@@ -367,11 +377,19 @@
     float: left;
     height: 40px;
     line-height: 40px;
-    padding: 10px;
     cursor: pointer;
     margin-right: 10px;
 }
 
 .page a {
     display: block;
+    padding: 0 10px;
+}
+
+.page li {
+    padding: 0 10px;
+}
+
+.page li:hover {
+    background-color: #eee;
 }
