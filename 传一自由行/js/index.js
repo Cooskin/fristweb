@@ -55,7 +55,7 @@ for (let i = 0; i < aNavLi.length; i++) {
 var travelsBtn = document.getElementById('travels_head');
 var aTravelsLi = travelsBtn.getElementsByTagName('li');
 
-function travels(ravelsId, image, title, text, country, userImage, userName, view, ding) {
+function travels(ravelsId, image, title, text, country, userImage, userName, view, ding, arr) {
     this.ravelsId = ravelsId;
     this.image = image;
     this.title = title;
@@ -65,6 +65,7 @@ function travels(ravelsId, image, title, text, country, userImage, userName, vie
     this.userName = userName;
     this.view = view;
     this.ding = ding;
+    this.oArr = arr;
 }
 var travels1 = new travels(
     `1`,
@@ -75,7 +76,7 @@ var travels1 = new travels(
     `<img src="./images/content/travels.jpg" alt="">`,
     '心态爆炸',
     '20/11',
-    0
+    0, []
 );
 var travels2 = new travels(
     `2`,
@@ -86,7 +87,7 @@ var travels2 = new travels(
     `<img src="./images/content/travels.jpg" alt="">`,
     '心态爆炸',
     '500/11',
-    1
+    1, []
 );
 var travels3 = new travels(
     `3`,
@@ -97,7 +98,7 @@ var travels3 = new travels(
     `<img src="./images/content/travels.jpg" alt="">`,
     '心态爆炸',
     '250/11',
-    3
+    3, []
 );
 var travels4 = new travels(
     `4`,
@@ -108,7 +109,7 @@ var travels4 = new travels(
     `<img src="./images/content/travels.jpg" alt="">`,
     '心态爆炸',
     '250/11',
-    10
+    10, []
 );
 var travels5 = new travels(
     `5`,
@@ -119,7 +120,7 @@ var travels5 = new travels(
     `<img src="./images/content/travels.jpg" alt="">`,
     '心态爆炸',
     '250/11',
-    0
+    0, []
 );
 var travels6 = new travels(
     `6`,
@@ -130,7 +131,7 @@ var travels6 = new travels(
     `<img src="./images/content/travels.jpg" alt="">`,
     '心态爆炸',
     '250/11',
-    3
+    3, []
 );
 var travels7 = new travels(
     `7`,
@@ -141,7 +142,7 @@ var travels7 = new travels(
     `<img src="./images/content/travels.jpg" alt="">`,
     '心态爆炸',
     '250/11',
-    1
+    1, []
 );
 var travels8 = new travels(
     `8`,
@@ -152,7 +153,7 @@ var travels8 = new travels(
     `<img src="./images/content/travels.jpg" alt="">`,
     '心态爆炸',
     '250/11',
-    12
+    12, []
 );
 var travels9 = new travels(
     `9`,
@@ -163,7 +164,7 @@ var travels9 = new travels(
     `<img src="./images/content/travels.jpg" alt="">`,
     '心态爆炸',
     '250/11',
-    20
+    20, []
 );
 var travels10 = new travels(
     `10`,
@@ -174,7 +175,7 @@ var travels10 = new travels(
     `<img src="./images/content/travels.jpg" alt="">`,
     '心态爆炸',
     '250/11',
-    1
+    1, []
 );
 var travels11 = new travels(
     `11`,
@@ -185,13 +186,16 @@ var travels11 = new travels(
     `<img src="./images/content/travels.jpg" alt="">`,
     '心态爆炸',
     '250/11',
-    6
+    6, []
 );
 
 var travelsArr = [travels1, travels2, travels3, travels4, travels5, travels6, travels7, travels8, travels9, travels10, travels11];
 
-var oldTravelsArr = JSON.stringify(travelsArr);
-localStorage.setItem('HX191110_travelsArr', oldTravelsArr);
+if (localStorage.getItem('HX191110_travelsArr') == null) {
+    var oldTravelsArr = JSON.stringify(travelsArr);
+    localStorage.setItem('HX191110_travelsArr', oldTravelsArr);
+} else {}
+
 
 var oInfo = document.getElementsByClassName('travels')[0];
 var aUl = oInfo.getElementsByTagName('ul')[0];
@@ -233,7 +237,7 @@ function rintingTravels(page, arr) {
     if (max > arr.length) {
         max = arr.length;
     }
-    oDingBtn = oInfo.getElementsByClassName('ding_btn');
+    var oDingBtn = oInfo.getElementsByClassName('ding_btn');
 
     for (let i = min; i < max; i++) {
         ravelsStr += `<li>
@@ -250,25 +254,40 @@ function rintingTravels(page, arr) {
         <a class="page_view" href="javascript:;">` + arr[i].view + `</a>
         <a class="ding" href="javascript:;">` + arr[i].ding + `</a>
         <a class="ding_btn" index = ` + arr[i].ravelsId + ` href="javascript:;"></a>
-    </li>`
-
+        </li>`
     }
     aUl.innerHTML = ravelsStr;
 
     for (let i = min; i < max; i++) {
+        console.log(oDingBtn[i])
+        oDingBtn = oInfo.getElementsByClassName('ding_btn');
+
         oDingBtn[i].onclick = function() {
-            for (let j = 0; j < arr.length; j++) {
-                if (this.index == arr[j].index) {
-                    if () {
+            for (let i = 0; i < arr.length; i++) {
+                if (this.getAttribute('index') == arr[i].ravelsId) {
+                    if (arr[i].oArr.length == 0) {
+                        arr[i].oArr.push(localStorage.getItem('HX191110_log'))
+                        arr[i].ding += 1;
+                        localStorage.setItem('HX191110_travelsArr', JSON.stringify(rintingTravelsArr))
+                        this.previousElementSibling.innerHTML = arr[i].ding;
+                    } else {
+                        for (let j = 0; j < arr[i].oArr.length; j++) {
+                            // alert(arr[i].OArr[j])
+                            if (arr[i].oArr[j] == localStorage.getItem('HX191110_log')) {
+                                alert('您以点过了哟')
+                                return;
+
+                            }
+                        }
+                        arr[i].oArr.push(localStorage.getItem('HX191110_log'));
+                        arr[i].ding += 1;
+                        localStorage.setItem('HX191110_travelsArr', JSON.stringify(rintingTravelsArr))
+                        this.previousElementSibling.innerHTML = arr[i].ding;
+
 
                     }
-                    arr[j].ding += 1;
                 }
             }
-            this.index
-            alert(j)
-
-
         }
     }
 }
@@ -283,7 +302,6 @@ for (let i = 0; i < aTravelsLi.length; i++) {
             rintingTravels(1, sort);
         } else {
             rintingTravels(1, newAry);
-            console.log(newAry)
         }
     }
 }
@@ -307,6 +325,8 @@ function paging(arr) {
         oLi.innerHTML = i + 1;
 
         oLi.onclick = function() {
+            console.log(oDingBtn[i])
+            oDingBtn = oInfo.getElementsByClassName('ding_btn');
             if (aTravelsLi[0].className == 'activ') {
                 rintingTravels(this.innerHTML, sort);
             } else {

@@ -165,6 +165,7 @@ oRegisterBtn.onclick = function() {
                     alert('注册成功')
                     oLogin.style.display = 'block';
                     oRegister.style.display = 'none';
+
                     return;
                 }
             }
