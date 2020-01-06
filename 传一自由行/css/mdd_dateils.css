@@ -17,10 +17,6 @@
     line-height: 30px;
 }
 
-.crumb div {
-    float: left;
-}
-
 .crumb a,
 .crumb span {
     color: #777;
