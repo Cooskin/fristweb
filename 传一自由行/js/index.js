@@ -54,6 +54,7 @@ for (let i = 0; i < aNavLi.length; i++) {
 // 游记
 var travelsBtn = document.getElementById('travels_head');
 var aTravelsLi = travelsBtn.getElementsByTagName('li');
+var oDingBtn;
 
 function travels(ravelsId, image, title, text, country, userImage, userName, view, ding, arr) {
     this.ravelsId = ravelsId;
@@ -194,7 +195,7 @@ var travelsArr = [travels1, travels2, travels3, travels4, travels5, travels6, tr
 if (localStorage.getItem('HX191110_travelsArr') == null) {
     var oldTravelsArr = JSON.stringify(travelsArr);
     localStorage.setItem('HX191110_travelsArr', oldTravelsArr);
-} else {}
+}
 
 
 var oInfo = document.getElementsByClassName('travels')[0];
@@ -237,7 +238,6 @@ function rintingTravels(page, arr) {
     if (max > arr.length) {
         max = arr.length;
     }
-    var oDingBtn = oInfo.getElementsByClassName('ding_btn');
 
     for (let i = min; i < max; i++) {
         ravelsStr += `<li>
@@ -257,26 +257,29 @@ function rintingTravels(page, arr) {
         </li>`
     }
     aUl.innerHTML = ravelsStr;
+    oDingBtn = oInfo.getElementsByClassName('ding_btn');
 
-    for (let i = min; i < max; i++) {
-        console.log(oDingBtn[i])
-        oDingBtn = oInfo.getElementsByClassName('ding_btn');
+    // 
+    for (let i = 0; i < oDingBtn.length; i++) {
 
         oDingBtn[i].onclick = function() {
-            for (let i = 0; i < arr.length; i++) {
-                if (this.getAttribute('index') == arr[i].ravelsId) {
-                    if (arr[i].oArr.length == 0) {
-                        arr[i].oArr.push(localStorage.getItem('HX191110_log'))
-                        arr[i].ding += 1;
+            if (localStorage.getItem('HX191110_log') == null) {
+                alert('您还没有登录，不能点赞');
+                return;
+            }
+            for (let j = 0; j < arr.length; j++) {
+                if (this.getAttribute('index') == arr[j].ravelsId) {
+                    if (arr[j].oArr.length == 0) {
+                        arr[j].oArr.push(localStorage.getItem('HX191110_log'))
+                        arr[j].ding += 1;
                         localStorage.setItem('HX191110_travelsArr', JSON.stringify(rintingTravelsArr))
-                        this.previousElementSibling.innerHTML = arr[i].ding;
+                        this.previousElementSibling.innerHTML = arr[j].ding;
                     } else {
-                        for (let j = 0; j < arr[i].oArr.length; j++) {
-                            // alert(arr[i].OArr[j])
-                            if (arr[i].oArr[j] == localStorage.getItem('HX191110_log')) {
+                        for (let k = 0; k < arr[k].oArr.length; k++) {
+
+                            if (arr[j].oArr[k] == localStorage.getItem('HX191110_log')) {
                                 alert('您以点过了哟')
                                 return;
-
                             }
                         }
                         arr[i].oArr.push(localStorage.getItem('HX191110_log'));
@@ -292,6 +295,9 @@ function rintingTravels(page, arr) {
     }
 }
 
+function abc(arr) {
+
+}
 for (let i = 0; i < aTravelsLi.length; i++) {
     aTravelsLi[i].onclick = function() {
         for (let j = 0; j < aTravelsLi.length; j++) {
@@ -325,10 +331,11 @@ function paging(arr) {
         oLi.innerHTML = i + 1;
 
         oLi.onclick = function() {
-            console.log(oDingBtn[i])
-            oDingBtn = oInfo.getElementsByClassName('ding_btn');
+            // console.log(oDingBtn[i])
+            // oDingBtn = oInfo.getElementsByClassName('ding_btn');
             if (aTravelsLi[0].className == 'activ') {
                 rintingTravels(this.innerHTML, sort);
+                // abc(sort);
             } else {
                 rintingTravels(this.innerHTML, newAry);
                 console.log(newAry)

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = {
+            '中国': {
+                '福建': {
+                    img: '图片',
+                    arr: '文字',
+                    moon: '1月'
+                },
+                '广东': {
+                    img: '图片',
+                    arr: '文字',
+                    moon: '2月'
+                },
+                '四川': {
+                    img: '图片',
+                    arr: '文字',
+                    moon: '4月'
+                }
+            },
+            '美国': {
+                '旧金山': {
+                    img: '图片',
+                    arr: '文字',
+                    moon: '5月'
+
+                },
+                '华盛顿': {
+                    img: '图片',
+                    arr: '文字',
+                    moon: '6月'
+
+                },
+                '佛罗里达州': {
+                    img: '图片',
+                    arr: '文字',
+                    moon: '3月'
+
+                }
+            }
+        };
+        for (let i in arr) {
+            var ospan = document.createElement('span');
+            ospan.innerHTML = '<br/>' + i + '<br/>';
+            document.body.appendChild(ospan);
+
+
+            // alert(i.length)
+            for (let j in arr[i]) {
+                ospan = document.createElement('span');
+                ospan.innerHTML = '<br/>' + j + '<br/>';
+                document.body.appendChild(ospan);
+
+                for (let k in arr[i][j]) {
+                    ospan = document.createElement('span');
+                    ospan.innerHTML = arr[i][j][k] + '&nbsp;';
+                    document.body.appendChild(ospan);
+
+                }
+            }
+
+        }
+        localStorage.setItem('arr', JSON.stringify(arr));
+    </script>
+</body>
+
+</html>
