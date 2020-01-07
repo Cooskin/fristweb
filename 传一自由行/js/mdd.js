@@ -138,7 +138,6 @@ function prinMonth(type) {
         }
     }
 }
-// kai()
 
 function city(obj) {
 
@@ -151,12 +150,8 @@ function city(obj) {
         }
 
         if (this != this.parentNode.firstElementChild) {
-            if (this.parentNode.firstElementChild.innerHTML == '直辖市') {
-                target.push(this.innerHTML);
-            } else {
-                target.push(this.parentNode.firstElementChild.innerHTML);
-                target.push(this.innerHTML);
-            }
+            target.push(this.parentNode.firstElementChild.innerHTML);
+            target.push(this.innerHTML);
         } else {
             if (this.innerHTML == '直辖市') {
                 return
@@ -174,22 +169,26 @@ function target(obj, i) {
     for (let j = 0; j < obj.length; j++) {
         obj[j].onclick = function() {
             var target = [];
-            for (let k = 0; k < pArr.length; k++) {
-                if (pArr[k].idx == cityArr[i].idx) {
-                    for (let l = 0; l < navArr.length; l++) {
-                        if (pArr[k].idn == navArr[l].idn) {
-                            target.push(navArr[l].name);
+            for (let m = 0; m < cityArr.length; m++) {
+                if (this.getAttribute('index') == cityArr[m].idz) {
+                    for (let k = 0; k < pArr.length; k++) {
+                        if (pArr[k].idx == cityArr[m].idx) {
+                            for (let l = 0; l < navArr.length; l++) {
+                                if (pArr[k].idn == navArr[l].idn) {
+                                    target.push(navArr[l].name);
+                                }
+                            }
+                            target.push(pArr[k].name);
                         }
                     }
-                    target.push(pArr[k].name);
                 }
-
             }
-            target.push(this.lastChild.innerHTML);
+            target.push(this.lastElementChild.innerHTML);
 
             localStorage.setItem('HX191110_traget', JSON.stringify(target))
 
             location.href = 'mdd_dateils.html';
         }
+
     }
 }
